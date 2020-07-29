@@ -34,16 +34,8 @@ function unleashDog(dogName, dogBreed) {
     return str;
 }
 
-const routine = [wakeDog, leashDog, walkToPark, throwFrisbee, walkHome, unleashDog];
+const routine = [wakeDog,leashDog,walkToPark,throwFrisbee,walkHome,unleashDog]
 
-function exerciseDog(dogName, dogBreed) {
-    const routine = [wakeDog, leashDog, walkToPark, throwFrisbee, walkHome, unleashDog];
-    const return_arr = [];
-    let i = 0;
-    while (i < routine.length) {
-        let fn = routine[i];
-        return_arr.push(fn(dogName, dogBreed));
-        i++
-    }
-    return_arr;
+function exerciseDog(dog, breed) {
+  return routine.map(fn => fn(dog, breed))
 }
